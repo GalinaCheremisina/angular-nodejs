@@ -27,6 +27,7 @@ export class PostService{
           )
                 .pipe(
                     map((postData) => {
+						
                     return {
                       posts: postData.posts.map(post => {
                       return {
@@ -39,6 +40,7 @@ export class PostService{
                     }),
                     maxPosts: postData.maxPosts
                   };
+				  
                   })
                 )
                 .subscribe(transformData => {
