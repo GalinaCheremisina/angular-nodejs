@@ -11,15 +11,15 @@ import { SharedModule } from '../shared/shared.module';
 @NgModule({
     declarations: [
         PostsComponent,
-        PostCreateComponent, 
-        PostListComponent
+        PostCreateComponent,
+        PostListComponent,
     ],
     imports: [
         CommonModule,
         SharedModule,
         MatPaginatorModule,
-        PostRoutingModule
+        PostRoutingModule,
     ],
     exports: [PostsComponent]
 })
-export class PostsModule{}
+export class PostsModule {}

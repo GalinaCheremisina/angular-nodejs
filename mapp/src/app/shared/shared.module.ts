@@ -1,29 +1,31 @@
-import { NgModule } from "@angular/core";
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import {    MatInputModule, 
-            MatCardModule, 
-            MatButtonModule, 
-            MatExpansionModule,
-            MatProgressSpinnerModule, 
-            MatDialogModule} from '@angular/material';
-            
+import {
+    MatInputModule,
+    MatCardModule,
+    MatButtonModule,
+    MatExpansionModule,
+    MatProgressSpinnerModule,
+    MatDialogModule
+} from '@angular/material';
+
 import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
     declarations: [
-        ErrorComponent
+        ErrorComponent,
     ],
-    exports:[
-        ReactiveFormsModule, 
+    exports: [
+        ReactiveFormsModule,
         FormsModule,
-        MatInputModule, 
-        MatCardModule, 
-        MatButtonModule, 
+        MatInputModule,
+        MatCardModule,
+        MatButtonModule,
         MatExpansionModule,
         MatProgressSpinnerModule,
         MatDialogModule,
-        ErrorComponent
+        ErrorComponent,
     ],
     entryComponents: [ErrorComponent]
 })
-export class SharedModule{}
+export class SharedModule {}

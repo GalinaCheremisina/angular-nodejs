@@ -10,25 +10,24 @@ import { AuthService } from 'src/app/shared/services/auth.service';
   styleUrls: ['./singup.component.css']
 })
 export class SingupComponent implements OnInit, OnDestroy {
-
-  isLoading = false;
+  public isLoading = false;
   private authSub: Subscription;
 
-  constructor(private _authService: AuthService){}
+  constructor(private _authService: AuthService) {}
 
-  ngOnInit(){
-    this.authSub = this._authService.getAuthStatus().subscribe(response =>{
+  public ngOnInit() {
+    this.authSub = this._authService.getAuthStatus().subscribe(response => {
       this.isLoading = false;
     });
   }
 
-  onSignup(form: NgForm): void {
-    if(form.invalid){ return; }
+  public onSignup(form: NgForm): void {
+    if (form.invalid) { return; }
     this.isLoading = true;
     this._authService.createUser(form.value.email, form.value.password);
   }
 
-  ngOnDestroy(){
+  public ngOnDestroy() {
     this.authSub.unsubscribe();
   }
 }

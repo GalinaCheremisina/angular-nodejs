@@ -5,13 +5,12 @@ import { AuthService } from './shared/services/auth.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
+  constructor(private _authService: AuthService) {}
 
-  constructor(private _authService: AuthService){}
-
-  ngOnInit(){
+  public ngOnInit() {
     this._authService.autoAuthUser();
   }
 }

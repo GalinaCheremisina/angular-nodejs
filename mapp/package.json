@@ -6,9 +6,13 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint",
     "e2e": "ng e2e",
-    "start:server": "nodemon ./backend/server.js"
+    "start:server": "nodemon ./backend/server.js",
+    "lint": "npm run lint:ts && npm run lint:prettier",
+    "lint:ts": "ng lint",
+    "lint:scss": "stylelint \"**/*.scss\"",
+    "lint:prettier": "prettier --list-different \"**/*.*\"",
+    "lint:prettier:partial": "prettier --list-different"
   },
   "private": true,
   "dependencies": {

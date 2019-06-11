@@ -1,19 +1,19 @@
-:host{
-    display: block;
-    margin-top: 1rem;
+:host {
+  display: block;
+  margin-top: 1rem;
 }
-.text-center{
-    text-align: center;
+.text-center {
+  text-align: center;
 }
-.post_img img{
-    max-width: 100%;
-    display: block;
-    margin: 10px auto;
-    max-height: 300px;
+.post_img img {
+  max-width: 100%;
+  display: block;
+  margin: 10px auto;
+  max-height: 300px;
 }
-mat-spinner{
-    margin: auto;
+mat-spinner {
+  margin: auto;
 }
-mat-paginator{
-    margin-top: 2em;
+mat-paginator {
+  margin-top: 2em;
 }
